@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics/CMS APIs Sample: Recently Added Videos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/source-code-pro" type="text/css"/>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <section class="bcls-section">
+<h2 id="sampleApp">Sample App</h2>
+
+<p>Below is a working sample app, which you can use on your own account or on a sample Brightcove account.</p>
+
+<fieldset class="bcls-fieldset"><legend>Input</legend>
+
+<h5><strong>Account id:</strong> <input id="account_id" type="text" placeholder="1752604059001" /></h5>
+
+<h5><strong>Client id (needs read access for the CMS and Analytics APIs):</strong> <input id="client_id" type="text" size="60" placeholder="c5d0a622-5479-46d8-8d8a-5f034b943fab" /></h5>
+
+<h5><strong>Client secret (needs read access for the CMS and Analytics APIs):</strong> <input id="client_secret" type="text" size="60" placeholder="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13-VIgs0itwKNsAwHOS80sOWKJ1BUwHIvSFG2IbgcxEGKg" /></h5>
+
+<h5>Select Dimension(s) to report on:</h5>
+
+<div id="dimensionsCol1" class="fields-list-col">&nbsp;</div>
+
+<div id="dimensionsCol2" class="fields-list-col">&nbsp;</div>
+
+<h5>Fields to return:<button id="fieldsButton" class="bcls-button">Select All</button><button id="deselectFieldsButton" class="bcls-button">Deselect All</button></h5>
+
+<div id="fieldsCol1" class="fields-list-col">&nbsp;</div>
+
+<div id="fieldsCol2" class="fields-list-col">&nbsp;</div>
+
+<h5>Get videos created in the past <select name="dateSelect" id="dateSelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="30" selected="selected">30</option><option value="60">60</option><option value="90">90</option><option value="180">180</option><option value="365">365</option></select> days</h5>
+
+<p><button id="getData" class="bcls-button">Get Analytics Data</button></p>
+</fieldset>
+
+<fieldset class="bcls-fieldset"><legend>Output</legend>
+
+<h5><strong id="count">Count will appear here...</strong></h5>
+
+<h5><strong id="logger">Log messages will appear here...</strong></h5>
+
+<h5><strong>API request:</strong></h5>
+<textarea id="apiRequest" class="bcls-code"></textarea>
+
+<h5><strong>Request method:</strong> <code id="apiMethod">Request method will appear here...</code></h5>
+
+<h5><strong>Response data</strong></h5>
+
+<pre class="line-numbers">
+<code id="responseData" class="language-json">Response will appear here...</code></pre>
+</fieldset>
+</section>
+  <script src='http://learning-services-media.brightcove.com/doc-assets/video-cloud-apis/analytics-api/aapi-model-v1.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
